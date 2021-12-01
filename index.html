@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,19 +9,76 @@
     <script src="js/clock.js" defer></script>
     <script src="js/quotes.js" defer></script>
     <script src="js/background.js" defer></script>
-    <title></title>
+    <script src="js/todo.js" defer></script>
+    <script src="js/weather.js" defer></script>
+    <script src="js/layerPopup.js" defer></script>
+    <title>Sam's to-do</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/d5f40216e0.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
-    <form id="form" class="hidden">
-        <input required maxlength="15" type="text" placeholder="Whats your name?">
-        <button>Log In</button>
-    </form>
-    <h1 id="greeting" class="hidden"></h1>
-    <h2 id="clock">00:00</h2>
-    <div id="quote">
-        <span></span>
-        <span></span>
-    </div>
+    <!-- HEADER -->
+    <header>
+        <div class="quoteBtn">
+            <i class="fas fa-quote-right"></i>
+        </div>
+        <a href="#" class="logo">
+            <span>SAM'S TO-DO LIST</span>
+            <i class="far fa-calendar-check"></i>
+        </a>
+        <div class="weatherBtn">
+            <i class="fas fa-temperature-low"></i>
+        </div>
+    </header>
+    <main>
+        <!-- Quote -->
+        <section class="quote">
+            <div class="quote__layer hidden">
+                <div id="quote__layer__paragragh">
+                    <span></span><br><br>
+                    <span></span>
+                </div>
+            </div>
+        </section>
+        <!-- WEATEHR -->
+        <section class="weather">
+            <div class="weather__layer hidden">
+                <div id="weather">
+                    <span class="weather__state"></span>
+                    <span class="weather__city"></span>
+                </div>
+            </div>
+        </section>
+        <!-- CLOCK -->
+        <section class="clock">
+            <h1 id="clock">00:00</h1>
+            <h3 id="date"></h3>
+        </section>
+        <!-- LOGIN -->
+        <section class="login">
+            <form id="login-form" class="removed">
+                <input required maxlength="15" type="text" placeholder="What's your name?">
+                <button><i class="fas fa-sign-in-alt"></i></button>
+            </form>
+            <h2 id="greeting" class="removed"></h2>
+        </section>
+        <!-- TODO -->
+        <section class="todo">
+            <div class="todo__layer hidden">
+                <i class="far fa-times-circle"></i>
+                <form id="todo-form">
+                    <input type="text" placeholder="Write a To Do and Press Enter" required>
+                </form>
+                <ul id="todo-list"></ul>
+            </div>
+            <button class="todoBtn">WRITE TO-DO LIST</button>
+        </section>
+    </main>
 </body>
+
 </html>

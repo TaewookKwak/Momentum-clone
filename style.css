@@ -1,3 +1,330 @@
-.hidden {
+:root{
+    /* font size */
+    --font-size-large : 60px;
+    --font-size-medium : 40px;
+    --font-size-small : 20px;
+
+    /* color */
+    --color-black : #000000;
+    --color-light-gray : #969292;
+    --color-white : #ffffff;
+    --color-brwon : #4d1e04;
+    --color-light-red : #e48585;
+    --color-light-red2 : rgb(218, 103, 103);
+    --color-light-blue : #8684d3;
+
+    /* padding */
+    --base-pading : 10px;
+
+    /* annimation */
+    --annimation-speed : 300ms;
+}
+
+
+
+
+body {
+    margin: 0px;
+    color: white;
+    width: 100%;
+    height: 100%;
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+    font-size: var(--font-size-large);
+    color: white;
+}
+
+h2 {
+    font-size: var(--font-size-medium);
+    color: white;
+}
+
+h3{
+    font-size: var(--font-size-small);
+    color: white;
+}
+
+span {
+    font-size: var(--font-size-small);
+    color: white;
+}
+
+header {
+    height: 60px;
+    background-color: var(--color-black);
+    display: flex;
+    justify-content: space-between;
+}
+header .weatherBtn,
+header .quoteBtn {
+    font-size: var(--font-size-medium);
+    margin: 0 var(--base-pading);
+    line-height: 60px;   
+    transition: all var(--annimation-speed) ease;
+    cursor: pointer;
+}
+
+
+header .quoteBtn:hover {
+    transform: scale(1.1);
+    color: var(--color-light-red);
+}
+
+header .weatherBtn:hover{
+    transform: scale(1.1);
+    color: var(--color-light-blue);
+}
+
+
+header .logo {
+    line-height: 60px;   
+    text-decoration: none; 
+    color: var(--color-white);
+    transition: all var(--annimation-speed) ease;
+}
+
+header .logo:hover{
+    transform: scale(1.1);
+}
+
+header .logo span{
+    margin-right: var(--base-pading);
+}
+
+/* MAIN */
+
+main {
+    position: relative;
+}
+
+main #clock {
+    text-align: center;
+    padding-top: 40px;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+main .quote__layer{
+    width: 300px;
+    height: fit-content;
+    position: absolute;
+    top : 0;
+    left: 0;
+    background-color: var(--color-light-red);
+    transition: all var(--annimation-speed) ease-in-out; 
+    box-shadow: 10px 5px 5px var(--color-light-red2);
+}
+
+main .quote__layer #quote__layer__paragragh {
+    text-align: center;
+    width: 80%;
+    margin: 30px auto;
+}
+
+main .weather__layer{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top : 0;
+    right: 0;
+    background-color: var(--color-light-blue);
+    transition: all var(--annimation-speed) ease-in-out;
+}
+
+main .weather__layer #weather {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+}
+
+main #login-form{
+    text-align: center;
+    margin: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+main #login-form.removed {
     display: none;
 }
+
+main #login-form input{
+    width: 200px;
+    height: 50px;
+    font-size: var(--font-size-small);
+    text-align: center;
+    color: var(--color-white);
+    margin: var(--base-pading);
+    padding: 0;
+    border : none;
+    background-color: transparent;
+    outline: none;
+}
+
+main #login-form input::placeholder {
+    color : var(--color-white);
+}
+
+
+main #login-form button {
+    height: 50px;
+    margin: var(--base-pading);
+    background-color: transparent;
+    color: var(--color-white);
+    font-size: var(--font-size-medium);
+    border : none;
+    cursor: pointer;
+}
+
+
+main #date {
+    text-align: center;
+    margin: 0;
+}
+
+main #greeting{
+    text-align: center;
+    margin: 100px;
+    padding: 10px;
+}
+
+main #greeting.removed{
+    display: none;
+}
+
+main .todo__layer {
+    background-color: var(--color-white);
+    width: 40%;
+    height: 60%;
+    position: fixed;
+    top: 15%;
+    left : 30%;
+    transition: all var(--annimation-speed) ease-in;
+    visibility: visible;
+    border-radius: 40px;
+    overflow-y: scroll;
+}
+
+main .todo__layer::-webkit-scrollbar {
+    width: 10px;
+}
+
+main .todo__layer::-webkit-scrollbar-thumb {
+    background-color: red;
+    border-radius: 30px;
+}
+
+main .todo__layer::-webkit-scrollbar-track {
+    background-color: transparent;
+    border-radius: 10px;
+}
+
+main .todo__layer #todo-list{
+    color: var(--color-black);
+}
+
+main .todo__layer #todo-list span{
+    color: var(--color-black);
+}
+
+main .todo__layer #todo-list button:nth-child(2) {
+    color: var(--color-white);
+    font-weight:1000;
+    font-size: var(--font-size-small);
+    outline: none;
+    border : none;
+    background-color: rgb(47, 0, 255);
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    margin: var(--base-pading) 6px;
+    
+}
+
+main .todo__layer #todo-list li span.strikethrough{
+    text-decoration: line-through;
+}
+
+main .todo__layer #todo-list button:nth-child(3) {
+    color: var(--color-white);
+    font-weight:1000;
+    font-size: var(--font-size-small);
+    outline: none;
+    border : none;
+    background-color: red;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    margin: var(--base-pading) 6px;
+    
+}
+
+main .todo__layer i {
+    color: var(--color-light-red);
+    font-size: var(--font-size-medium);
+    position: absolute;
+    top : 20px;
+    right : 20px;
+    cursor: pointer;
+}
+
+main .todo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main .todo .todoBtn{
+    width :30%;
+    height: 40px;
+    font-weight: 1000;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+}
+
+main #todo-form {
+    text-align: center;
+}
+
+main #todo-form input{
+    margin-top: 30px;
+    font-size: var(--font-size-small);
+    width : 300px;
+    height: 50px;
+    text-align: center;
+    border: none;
+    outline: none;
+    padding: 0;
+    background-color: transparent;
+    color: var(--color-black);
+}
+
+.backgroundImg {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment:fixed;
+    width: 100%;
+    height: 150%;
+    position : absolute;
+    top : 0px;
+    z-index: -1;
+    object-fit: cover;
+}
+
+.hidden {
+    visibility: hidden;
+    opacity: 0;
+    z-index: -2;
+}
+
+.remove {
+    display: none;
+}
+
+
