@@ -12,6 +12,7 @@
     --color-light-red : #e48585;
     --color-light-red2 : rgb(218, 103, 103);
     --color-light-blue : #8684d3;
+    --color-light-blue2 : #6965da;
 
     /* padding */
     --base-pading : 10px;
@@ -124,20 +125,24 @@ main .quote__layer #quote__layer__paragragh {
 }
 
 main .weather__layer{
-    width: 200px;
+    width: 300px;
     height: 200px;
     position: absolute;
     top : 0;
     right: 0;
     background-color: var(--color-light-blue);
     transition: all var(--annimation-speed) ease-in-out;
+    box-shadow: -10px 5px 5px var(--color-light-blue2);
 }
 
 main .weather__layer #weather {
+    position: absolute;
+    bottom: 20%;
     display: flex;
-    flex-direction: column;
     text-align: center;
     width: 100%;
+    justify-content: space-around;
+    margin-top: 50px;
 }
 
 main #login-form{
@@ -288,6 +293,11 @@ main .todo .todoBtn{
     cursor: pointer;
 }
 
+main .todo .todoBtn:hover{
+    background-color: var(--color-light-red);
+    color: var(--color-white);
+}
+
 main #todo-form {
     text-align: center;
 }
@@ -317,7 +327,42 @@ main #todo-form input{
     object-fit: cover;
 }
 
-.hidden {
+
+.sns{
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sns__container {
+    width: 60%;
+    height: 30%;
+    background-color: var(--color-white);
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.sns a i {
+    font-size: var(--font-size-large);
+    margin: 30px;
+    cursor: pointer;
+    transition: transform var(--annimation-speed) ease-in-out;
+}
+
+.sns a i:hover{
+    transform: rotate(20deg);
+
+}
+
+
+
+
+.hidden 
+{
     visibility: hidden;
     opacity: 0;
     z-index: -2;

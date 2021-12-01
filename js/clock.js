@@ -31,7 +31,7 @@ function convertMonthName(date){
 
 function updateDate() {
     const date = new Date();
-    const month = String(date.getMonth());
+    const month = String(date.getMonth() + 1);
     const day = String(date.getDate());
     let dateOfWeek = String(date.getDay());
     const hours = String(date.getHours()).padStart(2,'0');
