@@ -337,6 +337,7 @@ main #todo-form input{
 }
 
 .sns__container {
+    min-width: 600px;
     width: 60%;
     height: 30%;
     background-color: var(--color-white);

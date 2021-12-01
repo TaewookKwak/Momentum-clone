@@ -2,6 +2,7 @@ const API = '9de7d34dd5cebeb0d9725fa2be7ec143';
 const weatherLayer = document.querySelector('.weather__layer');
 const weatherBtn = document.querySelector('.weatherBtn')
 
+
 function onGeoOk(position){
     const lat = position.coords.latitude;
     const lng = position.coords.longitude;
