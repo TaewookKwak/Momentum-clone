@@ -29,3 +29,8 @@
 * [x] JS
 
 ---
+
+### Learned
+
+- Weather API
+- Javascript 이해
